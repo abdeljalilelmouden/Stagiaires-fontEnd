@@ -1,0 +1,16 @@
+<table *ngIf="departements" class="table table-responsive-sm container my-4" border="3">
+    <thead>
+      <tr>
+        <th scope="col">#ID</th>
+        <th scope="col">Nom</th>
+        <th scope="col">Responsable</th> 
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let departement of departements._embedded.departements">
+        <th>{{departement.id}}</th>
+        <td>{{departement.nom}}</td>
+        <td>{{departement.responsable}}</td>
+      </tr>
+    </tbody>
+  </table>

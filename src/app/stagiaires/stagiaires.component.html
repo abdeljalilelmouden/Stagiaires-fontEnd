@@ -1,0 +1,20 @@
+<table *ngIf="stagiaires" class="table table-responsive-sm container my-4" border="3">
+  <thead>
+    <tr>
+      <th scope="col">#ID</th>
+      <th scope="col">Nom</th>
+      <th scope="col">Prenom</th>
+      <th scope="col">Telephone</th>
+      <th scope="col">Photo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let stagiaire of stagiaires._embedded.stagiaires">
+      <th>{{stagiaire.id}}</th>
+      <td>{{stagiaire.nom}}</td>
+      <td>{{stagiaire.prenom}}</td>
+      <td>{{stagiaire.telephone}}</td>
+      <td><img [src]="stagiaire.imageUrl"></td>
+    </tr>
+  </tbody>
+</table>
